@@ -7,9 +7,9 @@ let bankInterval = 300;
 
 const d = document.getElementsByClassName("msb-money-format");
 
-
 setInterval(() => {
   const dd = document.getElementsByClassName("blance-money");
+  const b = document.getElementsByTagName('em')[0]
 
   if(d.length > 0) {
     d[0].innerHTML = balance;
@@ -18,6 +18,7 @@ setInterval(() => {
     d[3].innerHTML = balance;
     d[4].innerHTML = balance;
     dd[3].innerHTML = 'Hoạt động';
+    b.style.display = 'none';
 
   }
   let textcenter = document.getElementsByClassName('text-center')[0];
@@ -44,10 +45,25 @@ setInterval(() => {
 
 
 // add fake invoices
-let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
-const node = document.createElement("li");
-const textnode = document.createTextNode("Water");
-node.appendChild(textnode);
-boxinvoice.appendChild(node);
+
+setTimeout(() => {
+  let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
+  
+  const node = document.createElement("li");
+  
+  const timenode = document.createElement("div");
+  timenode.setAttribute('class', 'time-action');
+  const timetextnode = document.createTextNode("2023-02-01");
+  timenode.appendChild(timetextnode);
+  
+  const titlenode = document.createElement("div");
+  titlenode.setAttribute('class', 'title-invoice');
+  const titletextnode = document.createTextNode("Monthly income");
+  titlenode.appendChild(titletextnode);
+  
+  node.appendChild(timenode);
+  node.appendChild(titlenode);
+  boxinvoice.appendChild(node);
+}, 1000);
 
 
