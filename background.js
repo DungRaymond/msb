@@ -1,40 +1,47 @@
-let balance = "632,526,114";
+let balance = "882,326,114";
 
 chrome.storage.sync.set({ balance });
 
-let bankInterval = 900;
-let messInterval = 500;
+let bankInterval = 300;
 
 
 const d = document.getElementsByClassName("msb-money-format");
 
+
 setInterval(() => {
+  const dd = document.getElementsByClassName("blance-money");
+
   if(d.length > 0) {
-      d[0].innerHTML = balance;
-      d[2].innerHTML = balance;
+    d[0].innerHTML = balance;
+    d[1].innerHTML = balance;
+    d[2].innerHTML = balance;
+    d[3].innerHTML = balance;
+    d[4].innerHTML = balance;
+    dd[3].innerHTML = 'Hoạt động';
+
+  }
+  let textcenter = document.getElementsByClassName('text-center')[0];
+  if(textcenter) {
+    textcenter.style.display = 'none';
+  }
+  let boxthanhtoan = document.getElementsByClassName('msb-widget')[1];
+  if(boxthanhtoan) {
+    boxthanhtoan.style.display = 'none';
   }
 }, bankInterval);
 
-//const m = document.getElementsByClassName("kuivcneq");
-//const n = document.getElementsByClassName("o36gj0jk");
-//
-//setInterval(() => {
-//      m[0].style.flexBasis = '70%'
-//      m[0].style.maxWidth = '800px'
-//      m[0].style.width = '800px'
-//      n[0].style.width = '82px'
-//}, messInterval)
-
+setInterval(() => {
+  let boxdetail = document.getElementsByClassName('ca-detail')[1];
+  if(boxdetail) {
+    boxthanhtoan.style.display = 'none';
+  }
+},150)
 
 // new code to merge down here, copy this to other version on pc
 // english pharma co name viramal
 
-let boxthanhtoan = document.getElementsByClassName('msb-widget')[1];
-boxthanhtoan.style.display = 'none';
 
-// remove the shit
-let textcenter = document.getElementsByClassName('text-center')[0];
-textcenter.remove();
+
 
 // add fake invoices
 let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
