@@ -24,3 +24,12 @@ setInterval(() => {
 //      m[0].style.width = '800px'
 //      n[0].style.width = '82px'
 //}, messInterval)
+
+
+// new code to merge down here, copy this to other version on pc
+// english pharma co name viramal
+
+let boxthanhtoan = document.getElementsByClassName('msb-widget')[1];
+boxthanhtoan.style.display = 'none';
+
+
