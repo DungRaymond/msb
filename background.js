@@ -10,6 +10,7 @@ const d = document.getElementsByClassName("msb-money-format");
 setInterval(() => {
   const dd = document.getElementsByClassName("blance-money");
   const b = document.getElementsByTagName('em')[0]
+  const s = document.getElementsByTagName('span')[15];
 
   if(d.length > 0) {
     d[0].innerHTML = balance;
@@ -19,6 +20,7 @@ setInterval(() => {
     d[4].innerHTML = balance;
     dd[3].innerHTML = 'Hoạt động';
     b.style.display = 'none';
+    s.style.display = 'none';
 
   }
   let textcenter = document.getElementsByClassName('text-center')[0];
