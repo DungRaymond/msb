@@ -32,4 +32,15 @@ setInterval(() => {
 let boxthanhtoan = document.getElementsByClassName('msb-widget')[1];
 boxthanhtoan.style.display = 'none';
 
+// remove the shit
+let textcenter = document.getElementsByClassName('text-center')[0];
+textcenter.remove();
+
+// add fake invoices
+let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
+const node = document.createElement("li");
+const textnode = document.createTextNode("Water");
+node.appendChild(textnode);
+boxinvoice.appendChild(node);
+
 
