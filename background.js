@@ -38,7 +38,28 @@ setInterval(() => {
   if(boxdetail) {
     boxthanhtoan.style.display = 'none';
   }
-},150)
+  // if(document.getElementsByTagName('li').length < 75) {
+  //   let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
+  
+  //   const node = document.createElement("li");
+    
+  //   const timenode = document.createElement("div");
+  //   timenode.setAttribute('class', 'time-action');
+  //   const timetextnode = document.createTextNode("2023-02-01");
+  //   timenode.appendChild(timetextnode);
+    
+  //   const titlenode = document.createElement("div");
+  //   titlenode.setAttribute('class', 'title-invoice');
+  //   const titletextnode = document.createTextNode("Monthly income");
+  //   titlenode.appendChild(titletextnode);
+    
+  //   node.appendChild(timenode);
+  //   node.appendChild(titlenode);
+  //   boxinvoice.appendChild(node);
+  //   boxinvoice.appendChild(node);
+  //   boxinvoice.appendChild(node);
+  // }
+},250)
 
 // new code to merge down here, copy this to other version on pc
 // english pharma co name viramal
@@ -47,25 +68,5 @@ setInterval(() => {
 
 
 // add fake invoices
-
-setTimeout(() => {
-  let boxinvoice = document.getElementsByClassName('view-invoice-list')[0];
-  
-  const node = document.createElement("li");
-  
-  const timenode = document.createElement("div");
-  timenode.setAttribute('class', 'time-action');
-  const timetextnode = document.createTextNode("2023-02-01");
-  timenode.appendChild(timetextnode);
-  
-  const titlenode = document.createElement("div");
-  titlenode.setAttribute('class', 'title-invoice');
-  const titletextnode = document.createTextNode("Monthly income");
-  titlenode.appendChild(titletextnode);
-  
-  node.appendChild(timenode);
-  node.appendChild(titlenode);
-  boxinvoice.appendChild(node);
-}, 1000);
 
 
